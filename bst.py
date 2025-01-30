@@ -64,6 +64,13 @@ class BST:
   def __init__(self):
     self.root = None
 
+  def get_maximum(self, r):
+    if not r:
+        return
+    else:
+        return max(r.left, r.right)
+
+
   # Insert a node with the given key into the tree
   def insert(self, key):
     if self.root is None:
