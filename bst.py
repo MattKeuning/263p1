@@ -67,8 +67,8 @@ class BST:
   def get_maximum(self):
     if not self.root:
         return None
-    keep_going = self.root.right_node
-    while keep_going:
+    keep_going = self.root
+    while keep_going.right_node:
         keep_going = keep_going.right_node
     return keep_going
 
