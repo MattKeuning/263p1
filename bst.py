@@ -68,7 +68,7 @@ class BST:
     if not self.root:
         return
     else:
-        return max(self.root.left, self.root.right)
+        return max(self.root.left_node, self.root.right_node)
 
 
   # Insert a node with the given key into the tree
