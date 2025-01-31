@@ -77,7 +77,7 @@ class BST:
         return True
     mem = self.root.key
     n = self.root
-    def rec(self, n, m):
+    def rec(n, m):
         if not n:
             return True
         if n.left_node:
