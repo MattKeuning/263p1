@@ -90,6 +90,7 @@ class BST:
                 return rec(n.right_node, n.key)
             else:
                 return False
+        return True
     return rec(n, mem)
             
         
