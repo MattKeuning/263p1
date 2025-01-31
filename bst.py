@@ -77,21 +77,21 @@ class BST:
         return True
     mem = self.root.key
     n = self.root
-    def rec(n, m):
+    def rec(n, m, m1):
         if not n:
             return True
         if n.left_node:
-            if n.left_node.key < m:
-                return rec(n.left_node, n.key)
+            if m < n.left_node.key < m1:
+                return rec(n.left_node, m, n.key)
             else:
                 return False
         if n.right_node:
-            if n.right_node.key > m:
-                return rec(n.right_node, n.key)
+            if m1 > n.right_node.key > m:
+                return rec(n.right_node, n.key, m1)
             else:
                 return False
         return True
-    return rec(n, mem)
+    return rec(n, -10000, 10000)
             
         
 
