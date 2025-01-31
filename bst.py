@@ -72,6 +72,11 @@ class BST:
         keep_going = keep_going.right_node
     return keep_going
 
+  def verify(self):
+    if not self.root:
+        return True
+    def rec(self, n):
+        pass
 
   # Insert a node with the given key into the tree
   def insert(self, key):
