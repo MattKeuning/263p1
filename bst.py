@@ -75,8 +75,24 @@ class BST:
   def verify(self):
     if not self.root:
         return True
-    def rec(self, n):
-        pass
+    mem = self.root.key
+    n = self.root
+    def rec(self, n, m):
+        if not n:
+            return True
+        if n.left_node:
+            if n.left_node < m:
+                return rec(n.left_node, n.key)
+            else:
+                return False
+        if n.right_node:
+            if n.right_node > m:
+                return rec(n.right_node, n.key)
+            else:
+                return False
+    return rec(n, mem)
+            
+        
 
   # Insert a node with the given key into the tree
   def insert(self, key):
