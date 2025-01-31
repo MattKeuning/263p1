@@ -81,12 +81,12 @@ class BST:
         if not n:
             return True
         if n.left_node:
-            if n.left_node < m:
+            if n.left_node.key < m:
                 return rec(n.left_node, n.key)
             else:
                 return False
         if n.right_node:
-            if n.right_node > m:
+            if n.right_node.key > m:
                 return rec(n.right_node, n.key)
             else:
                 return False
