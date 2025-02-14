@@ -26,7 +26,7 @@ class MaxPriorityQueue:
     # However, do NOT remove this item. Peek should not modify your PQ at all, it is readonly
     # If your PQ is empty, return None
   def peek_max(self):
-    return self.pq[0]
+    return self.pq[0] if self.pq else None
 
   # Return the value of the largest item in the PQ AND remove it
     # If your PQ is empty, return None
